@@ -1,0 +1,41 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the dataset into a pandas DataFrame
+data = pd.read_csv("your_data.csv")
+
+# Print the first 5 rows of the dataset
+print(data.head())
+
+# Get the shape of the dataset (rows, columns)
+print(data.shape)
+
+# Get the data types of each column
+print(data.dtypes)
+
+# Get basic statistics for each column
+print(data.describe())
+
+# Check for missing values
+print(data.isnull().sum())
+
+# Check for duplicate rows
+print(data.duplicated().sum())
+
+# Plot a histogram of a numerical column
+data["column_name"].hist()
+plt.show()
+
+# Plot a bar chart of a categorical column
+data["column_name"].value_counts().plot(kind='bar')
+plt.show()
+
+# Plot a scatter plot of two numerical columns
+data.plot(kind='scatter', x='col_1', y='col_2')
+plt.show()
+
+# Plot a box plot of a numerical column grouped by a categorical column
+sns.boxplot(x='col_1', y='col_2', data=data)
+plt.show()
