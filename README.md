@@ -1,2 +1,2 @@
-# python-eda
-Start your EDA here
+# python-essentials
+A one-stop-shop for a data science workflow using python
