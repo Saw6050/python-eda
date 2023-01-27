@@ -1,16 +1,23 @@
 import pandas as pd
+from pandas_profiling import ProfileReport
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+csv_data_path = "C:/Users/User/Git-Repo/python-essentials/Data/data-raw/HRDataset_v14.csv"
+
 # Load the dataset into a pandas DataFrame
-data = pd.read_csv("your_data.csv")
+data = pd.read_csv(csv_data_path)
 
 # Print the first 5 rows of the dataset
 print(data.head())
 
 # Get the shape of the dataset (rows, columns)
 print(data.shape)
+
+# Get a pandas profile report
+profile = ProfileReport(data, title="Report")
+profile
 
 # Get the data types of each column
 print(data.dtypes)
